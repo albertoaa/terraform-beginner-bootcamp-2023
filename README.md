@@ -65,3 +65,25 @@ You can use [chmod](https://en.wikipedia.org/wiki/Chmod) to add permissions to p
 We need to be carefull when using init since it won't re-run a task when restarting an existing workspace.
 https://www.gitpod.io/docs/configure/workspaces/tasks#prebuild-and-new-workspaces
 
+
+## Install AWS CLI
+AWS CLI it's installed on the project via the script [./bin/install_aws_cli](./bin/install_aws_cli).
+
+[Getting Started with AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+[AWS CLI Env Vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+### AWS Credentials
+We can always check if credentials are set correctly by issuing the following AWS CLI command: `aws sts get-caller-identity`
+
+If everything is setup correctly you should see a JSON response similar to this:
+
+```json
+{
+    "UserId": "BIDAX3JPUs33ZO3PN0PJW",
+    "Account": "123456789012",
+    "Arn": "arn:aws:iam::123456789012:user/terraform_beginner_bootcamp"
+}
+```
+
+Will need to generate new AWS Credentials from IAM for CLI access.
