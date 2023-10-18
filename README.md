@@ -85,3 +85,5 @@ If everything is setup correctly you should see a JSON response similar to this:
     "Arn": "arn:aws:iam::123456789012:user/terraform_beginner_bootcamp"
 }
 ```
+
+Will need to generate new AWS Credentials from IAM for CLI access.
